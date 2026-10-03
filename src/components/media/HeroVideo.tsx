@@ -1,9 +1,7 @@
 import type { ReactNode } from 'react'
 import { Placeholder } from '~/components/ui/Placeholder'
 
-// Full-bleed hero media. Phase 1 = poster-only placeholder (no source footage yet,
-// see docs/design.md); when the client supplies footage, add /public/hero.mp4 (+poster)
-// and render the <video> variant below.
+// Poster-only below 640px; desktop video uses the same poster while loading.
 export function HeroVideo({
   videoSrc,
   posterSrc,
@@ -15,9 +13,12 @@ export function HeroVideo({
 }) {
   return (
     <div className="absolute inset-0 overflow-hidden">
+      {videoSrc && posterSrc && (
+        <img src={posterSrc} alt="" className="h-full w-full object-cover sm:hidden" />
+      )}
       {videoSrc ? (
         <video
-          className="h-full w-full object-cover"
+          className="hidden h-full w-full object-cover sm:block"
           autoPlay
           muted
           loop
