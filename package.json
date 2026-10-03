@@ -1,5 +1,5 @@
 {
-  "name": "tanstack-start-example-basic",
+  "name": "deepwater-production",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -7,16 +7,15 @@
     "dev": "vite dev",
     "build": "vite build && tsc --noEmit",
     "preview": "vite preview",
-    "start": "node .output/server/index.mjs"
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.170.41",
-    "@tanstack/react-router-devtools": "^1.167.2",
     "@tanstack/react-start": "^1.168.60",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwind-merge": "^3.6.0",
-    "zod": "^4.4.3"
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.62.5",
@@ -26,10 +25,10 @@
     "@types/react-dom": "^19.0.3",
     "@typescript/native": "npm:typescript@^7.0.2",
     "@vitejs/plugin-react": "^6.0.1",
-    "nitro": "^3.0.260311-beta",
     "tailwindcss": "^4.2.2",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "vite": "^8.0.14",
     "wrangler": "^4.147.0"
-  }
+  },
+  "version": "0.1.0"
 }
