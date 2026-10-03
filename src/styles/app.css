@@ -1,0 +1,48 @@
+@import 'tailwindcss' source('../');
+
+@theme {
+  /* Palette: docs/design.md (confirmed against Stitch screens + PRD) */
+  --color-abyss: #060f18;
+  --color-surface: #0b1520;
+  --color-elevated: #111a26;
+  --color-line: #1e2c3a;
+  --color-navy: #2b4a63;
+  --color-ice: #c5e8fa;
+  --color-ice-dim: #9cc4d8;
+  --color-ink: #f4f5f6;
+  --color-ink-soft: #d1d5db;
+  --color-ink-muted: #9ca3af;
+
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-glow: 0 0 24px -4px rgb(197 232 250 / 0.25);
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-abyss text-ink font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-navy text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ice;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
