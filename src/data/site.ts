@@ -1,3 +1,5 @@
+export const COPYRIGHT_YEAR = 2026
+
 export const site = {
   name: 'Deepwater Productions',
   legalName: 'Deepwater Productions, LLP',
@@ -18,7 +20,7 @@ export const site = {
   ],
   footerBlurb:
     'A Texas-based film and television production company producing narrative features and the Potts Power Podcast.',
-  copyright: `© ${new Date().getFullYear()} Deepwater Productions, LLP. All rights reserved.`,
+  copyright: `© ${COPYRIGHT_YEAR} Deepwater Productions, LLP. All rights reserved.`,
   copy: {
     inquiriesCta: 'Inquiries',
     exploreFilms: 'Explore Films',
