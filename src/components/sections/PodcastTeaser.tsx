@@ -6,13 +6,17 @@ import { Placeholder } from '~/components/ui/Placeholder'
 import { Button } from '~/components/ui/Button'
 import { podcast, podcastCopy } from '~/data/podcast'
 
-export function PodcastTeaser() {
+export function PodcastTeaser({
+  headingLevel = 'h2',
+}: {
+  headingLevel?: 'h1' | 'h2'
+}) {
   return (
     <Section id="podcast" className="bg-surface">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
           <Text tone="meta">{podcastCopy.meta}</Text>
-          <Heading level="h2" className="mt-2">
+          <Heading level={headingLevel} className="mt-2">
             {podcast.title}
           </Heading>
           <Text tone="soft" className="mt-2">

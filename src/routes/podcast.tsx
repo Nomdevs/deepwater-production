@@ -22,7 +22,7 @@ function PodcastPage() {
   return (
     <>
       <div className="pt-8 md:pt-12">
-        <PodcastTeaser />
+        <PodcastTeaser headingLevel="h1" />
       </div>
       <Section>
         <Heading level="h2">{podcastCopy.episodesHeading}</Heading>
