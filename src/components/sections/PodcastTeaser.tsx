@@ -4,19 +4,19 @@ import { Text } from '~/components/ui/Text'
 import { LinkButton } from '~/components/ui/LinkButton'
 import { Placeholder } from '~/components/ui/Placeholder'
 import { Button } from '~/components/ui/Button'
-import { podcast } from '~/data/podcast'
+import { podcast, podcastCopy } from '~/data/podcast'
 
 export function PodcastTeaser() {
   return (
     <Section id="podcast" className="bg-surface">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
-          <Text tone="meta">Podcast</Text>
+          <Text tone="meta">{podcastCopy.meta}</Text>
           <Heading level="h2" className="mt-2">
             {podcast.title}
           </Heading>
           <Text tone="soft" className="mt-2">
-            Hosted by {podcast.host}
+            {podcastCopy.hostedByPrefix} {podcast.host}
           </Text>
           <Text className="mt-4">{podcast.description}</Text>
           <div className="mt-6">
@@ -37,7 +37,10 @@ export function PodcastTeaser() {
                   {link.label}
                 </Button>
               ) : (
-                <Placeholder key={link.label} label={`${link.label} link`} />
+                <Placeholder
+                  key={link.label}
+                  label={podcastCopy.listenLinkPlaceholder(link.label)}
+                />
               ),
             )}
           </div>
@@ -46,7 +49,7 @@ export function PodcastTeaser() {
           <div className="text-center">
             <span className="font-display text-8xl text-navy">P³</span>
             <div className="mt-4">
-              <Placeholder label="podcast artwork" />
+              <Placeholder label={podcastCopy.artworkPlaceholder} />
             </div>
           </div>
         </div>

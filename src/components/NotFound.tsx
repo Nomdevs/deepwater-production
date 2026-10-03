@@ -1,25 +1,25 @@
 import { Link } from '@tanstack/react-router'
+import { site } from '~/data/site'
+import { Button } from '~/components/ui/Button'
 
-export function NotFound({ children }: { children?: any }) {
+export function NotFound() {
   return (
-    <div className="space-y-2 p-2">
-      <div className="text-gray-600 dark:text-gray-400">
-        {children || <p>The page you are looking for does not exist.</p>}
-      </div>
-      <p className="flex items-center gap-2 flex-wrap">
-        <button
-          onClick={() => window.history.back()}
-          className="bg-emerald-500 text-white px-2 py-1 rounded-sm uppercase font-black text-sm"
-        >
-          Go back
-        </button>
+    <div className="mx-auto max-w-2xl px-6 py-24 text-center">
+      <h1 className="font-display text-4xl text-ink">
+        {site.copy.notFound.heading}
+      </h1>
+      <p className="mt-4 text-ink-soft">{site.copy.notFound.body}</p>
+      <div className="mt-8 flex justify-center gap-4">
+        <Button variant="secondary" onClick={() => window.history.back()}>
+          {site.copy.notFound.goBack}
+        </Button>
         <Link
           to="/"
-          className="bg-cyan-600 text-white px-2 py-1 rounded-sm uppercase font-black text-sm"
+          className="inline-flex min-h-11 items-center rounded bg-ice px-5 py-2.5 text-sm font-semibold text-abyss shadow-glow transition hover:bg-white"
         >
-          Start Over
+          {site.copy.notFound.startOver}
         </Link>
-      </p>
+      </div>
     </div>
   )
 }

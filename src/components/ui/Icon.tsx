@@ -1,11 +1,6 @@
-import * as React from 'react'
-
 const paths = {
-  arrowRight: 'M5 12h14m-6-6 6 6-6 6',
   menu: 'M4 7h16M4 12h16M4 17h16',
   close: 'M6 6l12 12M18 6L6 18',
-  play: 'M8 5v14l11-7z',
-  mail: 'M4 6h16v12H4z M4 7l8 6 8-6',
 } as const
 
 export type IconName = keyof typeof paths

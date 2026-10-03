@@ -16,7 +16,7 @@ export function SiteFooter() {
         </div>
         <nav aria-label="Footer">
           <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
-            Explore
+            {site.copy.footerExplore}
           </h2>
           <ul className="mt-4 space-y-2">
             {navItems.map((item) => (
@@ -33,7 +33,7 @@ export function SiteFooter() {
         </nav>
         <div>
           <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
-            Follow
+            {site.copy.footerFollow}
           </h2>
           <ul className="mt-4 space-y-2">
             {site.socials.map((social) => (

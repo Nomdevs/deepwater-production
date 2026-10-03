@@ -13,4 +13,14 @@ export const podcast = {
     title: null as string | null,
     description: null as string | null,
   },
+  creditEntry: { meta: 'Podcast', detail: 'Founder & Moderator' },
+}
+
+export const podcastCopy = {
+  meta: 'Podcast',
+  hostedByPrefix: 'Hosted by',
+  artworkPlaceholder: 'podcast artwork',
+  listenLinkPlaceholder: (label: string) => `${label} link`,
+  episodesHeading: 'Recent Episodes',
+  episodesPlaceholder: 'episode list / player embed',
 }

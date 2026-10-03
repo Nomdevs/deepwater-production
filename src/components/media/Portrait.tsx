@@ -1,4 +1,5 @@
 import { Placeholder } from '~/components/ui/Placeholder'
+import { aboutCopy } from '~/data/about'
 
 // Headshot placeholder until the client supplies a portrait (docs/content.md).
 export function Portrait({ name }: { name: string }) {
@@ -12,7 +13,7 @@ export function Portrait({ name }: { name: string }) {
             .slice(0, 2)
             .join('')}
         </span>
-        <Placeholder label="headshot" />
+        <Placeholder label={aboutCopy.portraitPlaceholder} />
       </div>
     </div>
   )

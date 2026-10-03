@@ -27,3 +27,13 @@ export const about = {
   ],
   pullQuote: null as string | null, // placeholder until client supplies a quote
 }
+
+export const aboutCopy = {
+  meta: 'About',
+  storyMeta: 'The Story',
+  storyHeading: 'From the Courtroom to the Screen',
+  chapterPrefix: 'Chapter',
+  creditsMeta: 'Credits',
+  creditsHeading: 'Selected Work',
+  portraitPlaceholder: 'headshot',
+}

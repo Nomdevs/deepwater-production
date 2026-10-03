@@ -4,6 +4,7 @@ import { Text } from '~/components/ui/Text'
 import { Badge } from '~/components/ui/Badge'
 import { films } from '~/data/films'
 import { podcast } from '~/data/podcast'
+import { aboutCopy } from '~/data/about'
 
 export function CreditsTimeline() {
   const entries = [
@@ -14,16 +15,16 @@ export function CreditsTimeline() {
     })),
     {
       label: podcast.title,
-      meta: 'Podcast',
-      detail: 'Founder & Moderator',
+      meta: podcast.creditEntry.meta,
+      detail: podcast.creditEntry.detail,
     },
   ]
 
   return (
     <Section id="credits" className="bg-surface">
-      <Text tone="meta">Credits</Text>
+      <Text tone="meta">{aboutCopy.creditsMeta}</Text>
       <Heading level="h2" className="mt-2">
-        Selected Work
+        {aboutCopy.creditsHeading}
       </Heading>
       <ul className="mt-10 divide-y divide-line border-y border-line">
         {entries.map((entry) => (

@@ -4,6 +4,7 @@ import { Nav } from '~/components/layout/Nav'
 import { LinkButton } from '~/components/ui/LinkButton'
 import { Button } from '~/components/ui/Button'
 import { Icon } from '~/components/ui/Icon'
+import { site } from '~/data/site'
 
 export function SiteHeader() {
   const [open, setOpen] = React.useState(false)
@@ -15,7 +16,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-6 md:flex">
           <Nav />
           <LinkButton to="/contact" size="md">
-            Inquiries
+            {site.copy.inquiriesCta}
           </LinkButton>
         </div>
         <Button
@@ -41,7 +42,7 @@ export function SiteHeader() {
             className="mt-4 w-full"
             onClick={() => setOpen(false)}
           >
-            Inquiries
+            {site.copy.inquiriesCta}
           </LinkButton>
         </div>
       )}

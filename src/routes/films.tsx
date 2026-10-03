@@ -5,7 +5,7 @@ import { Heading } from '~/components/ui/Heading'
 import { Text } from '~/components/ui/Text'
 import { PosterCard } from '~/components/media/PosterCard'
 import { Placeholder } from '~/components/ui/Placeholder'
-import { films } from '~/data/films'
+import { films, filmsCopy } from '~/data/films'
 
 export const Route = createFileRoute('/films')({
   head: () => ({
@@ -23,22 +23,22 @@ export const Route = createFileRoute('/films')({
 function FilmsPage() {
   return (
     <Section className="pt-24 md:pt-32">
-      <Text tone="meta">Film & Television</Text>
+      <Text tone="meta">{filmsCopy.meta}</Text>
       <Heading level="h1" className="mt-2">
-        Films
+        {filmsCopy.pageHeading}
       </Heading>
-      <Text className="mt-4 max-w-2xl">
-        Feature films and shorts developed and produced by Deepwater Productions.
-      </Text>
+      <Text className="mt-4 max-w-2xl">{filmsCopy.pageIntro}</Text>
       <div className="mt-12 grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
         {films.map((film) => (
           <article key={film.slug}>
             <PosterCard film={film} />
             <div className="mt-3">
               {film.synopsis ? (
-                <Text tone="muted" className="text-sm">{film.synopsis}</Text>
+                <Text tone="muted" className="text-sm">
+                  {film.synopsis}
+                </Text>
               ) : (
-                <Placeholder label={`${film.title} synopsis`} />
+                <Placeholder label={filmsCopy.synopsisPlaceholder(film.title)} />
               )}
             </div>
           </article>

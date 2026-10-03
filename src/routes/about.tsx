@@ -9,7 +9,7 @@ import { StoryArc } from '~/components/sections/StoryArc'
 import { CreditsTimeline } from '~/components/sections/CreditsTimeline'
 import { PullQuote } from '~/components/sections/PullQuote'
 import { ContactStrip } from '~/components/sections/ContactStrip'
-import { about } from '~/data/about'
+import { about, aboutCopy } from '~/data/about'
 
 export const Route = createFileRoute('/about')({
   head: () => ({
@@ -30,7 +30,7 @@ function AboutPage() {
       <Section className="pt-24 md:pt-32">
         <div className="grid items-start gap-10 md:grid-cols-[minmax(0,1fr)_320px]">
           <div>
-            <Text tone="meta">About</Text>
+            <Text tone="meta">{aboutCopy.meta}</Text>
             <Heading level="h1" className="mt-2">
               {about.name}
             </Heading>

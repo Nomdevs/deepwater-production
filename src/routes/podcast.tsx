@@ -4,7 +4,7 @@ import { PodcastTeaser } from '~/components/sections/PodcastTeaser'
 import { Section } from '~/components/ui/Section'
 import { Heading } from '~/components/ui/Heading'
 import { Placeholder } from '~/components/ui/Placeholder'
-import { podcast } from '~/data/podcast'
+import { podcast, podcastCopy } from '~/data/podcast'
 
 export const Route = createFileRoute('/podcast')({
   head: () => ({
@@ -25,9 +25,9 @@ function PodcastPage() {
         <PodcastTeaser />
       </div>
       <Section>
-        <Heading level="h2">Recent Episodes</Heading>
+        <Heading level="h2">{podcastCopy.episodesHeading}</Heading>
         <div className="mt-6">
-          <Placeholder label="episode list / player embed" />
+          <Placeholder label={podcastCopy.episodesPlaceholder} />
         </div>
       </Section>
     </>

@@ -47,3 +47,14 @@ export const films: Array<Film> = [
     synopsis: null,
   },
 ]
+
+export const filmsCopy = {
+  meta: 'Film & Television',
+  homeHeading: 'The Slate',
+  pageHeading: 'Films',
+  pageIntro:
+    'Feature films and shorts developed and produced by Deepwater Productions.',
+  synopsisPlaceholder: (title: string) => `${title} synopsis`,
+  posterArtPlaceholder: 'poster art',
+  yearTbd: 'Year TBD',
+}

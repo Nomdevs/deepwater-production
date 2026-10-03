@@ -20,10 +20,10 @@ export function HeroSection() {
           <Text className="mt-6 max-w-xl text-lg">{site.description}</Text>
           <div className="mt-8 flex flex-wrap gap-4">
             <LinkButton to="/films" size="lg">
-              Explore Films
+              {site.copy.exploreFilms}
             </LinkButton>
             <LinkButton to="/about" size="lg" variant="secondary">
-              About Deepwater
+              {site.copy.aboutDeepwater}
             </LinkButton>
           </div>
         </Container>
