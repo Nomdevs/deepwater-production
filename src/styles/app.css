@@ -17,6 +17,8 @@
   --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
 
   --shadow-glow: 0 0 24px -4px rgb(197 232 250 / 0.25);
+
+  --gradient-hero: radial-gradient(ellipse at bottom, #0d2331 0%, #060f18 65%);
 }
 
 @layer base {

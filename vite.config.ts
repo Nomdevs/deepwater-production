@@ -20,6 +20,7 @@ export default defineConfig({
         enabled: true,
         crawlLinks: true,
         autoStaticPathsDiscovery: true,
+        autoSubfolderIndex: true,
       },
     }),
     viteReact(),

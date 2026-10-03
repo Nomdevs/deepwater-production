@@ -1,13 +1,30 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { seo } from '~/lib/seo'
+import { HeroSection } from '~/components/sections/HeroSection'
+import { FilmsRow } from '~/components/sections/FilmsRow'
+import { PodcastTeaser } from '~/components/sections/PodcastTeaser'
+import { ContactStrip } from '~/components/sections/ContactStrip'
 
 export const Route = createFileRoute('/')({
-  component: Home,
+  head: () => ({
+    meta: [
+      ...seo({
+        title: 'Deepwater Productions — Texas Film & Television',
+        description:
+          'Deepwater Productions, LLP — a Texas-based movie and television production company founded by Derek H. Potts.',
+      }),
+    ],
+  }),
+  component: HomePage,
 })
 
-function Home() {
+function HomePage() {
   return (
-    <div className="p-2">
-      <h3>Welcome Home!!!</h3>
-    </div>
+    <>
+      <HeroSection />
+      <FilmsRow />
+      <PodcastTeaser />
+      <ContactStrip />
+    </>
   )
 }

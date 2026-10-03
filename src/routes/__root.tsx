@@ -3,8 +3,9 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import * as React from 'react'
 import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary'
 import { NotFound } from '~/components/NotFound'
+import { PageShell } from '~/components/layout/PageShell'
 import appCss from '~/styles/app.css?url'
-import { seo } from '~/utils/seo'
+import { seo } from '~/lib/seo'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -42,7 +43,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {children}
+        <PageShell>{children}</PageShell>
         <Scripts />
       </body>
     </html>
