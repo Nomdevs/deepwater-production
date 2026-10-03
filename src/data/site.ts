@@ -7,6 +7,7 @@ export const site = {
   tagline: null as string | null,
   heroVideo: '/hero.mp4', // compressed per docs/design.md; source: public/brand/deepwater.mp4
   heroPoster: '/hero-poster.jpg',
+  stillImage: '/artwork/hero-still.webp', // Stitch underwater still (no text) — section backdrop
   contactEmail: null as string | null,
   contactPhone: null as string | null,
   socials: [

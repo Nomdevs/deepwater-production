@@ -6,6 +6,7 @@ export type Film = {
   actingRole: string | null
   note: string
   synopsis: string | null // null = placeholder synopsis until client supplies copy
+  poster: string | null // Stitch concept art (credits stripped) until client supplies final art
 }
 
 // Facts verified per docs/content.md (IMDb mini bio). Nothing else is invented.
@@ -18,6 +19,7 @@ export const films: Array<Film> = [
     actingRole: 'Richard Bishop, Director of the CIA',
     note: 'Also known as The Shipment.',
     synopsis: null,
+    poster: '/posters/narco-sub.webp',
   },
   {
     slug: 'the-last-astronaut',
@@ -27,6 +29,7 @@ export const films: Array<Film> = [
     actingRole: 'Richard Bishop',
     note: '',
     synopsis: null,
+    poster: null, // Stitch download URL for this poster is broken; see decisions.md D11
   },
   {
     slug: 'burleson',
@@ -36,6 +39,7 @@ export const films: Array<Film> = [
     actingRole: null,
     note: 'A short western shot in Texas at Derek’s West Texas ranch.',
     synopsis: null,
+    poster: '/posters/burleson.webp',
   },
   {
     slug: 'the-four-aces',
@@ -45,6 +49,7 @@ export const films: Array<Film> = [
     actingRole: null,
     note: 'Directed by Derek’s son, Drake Potts.',
     synopsis: null,
+    poster: '/posters/the-four-aces.webp',
   },
 ]
 

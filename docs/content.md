@@ -6,5 +6,6 @@ Verified facts (source: Derek H. Potts IMDb mini bio, https://www.imdb.com/name/
 - Client brand assets: logo38.jpg + social-profile.jpg downloaded from Stitch 2026-10-03 (see design.md).
 Stitch screens contain copy and details NOT verified and therefore NOT usable (invented by Stitch): "Robot Kills" film, director/cast credits (Alejandro Vargas, Diego Luna, etc.), festival laurels (TIFF, Sitges, Sundance), critic quotes, "Texas Motion Picture Union Registered", coordinates, runtime/aspect-ratio specs, studio stats (14 titles, 28 wins), Austin/Houston/LA studio addresses, most footer link labels. Do not ship any of these; write copy from the verified facts above.
 Branding name: "Deepwater Productions".
-Placeholders (never invent): tagline, hero video, headshot, poster art, synopses, podcast links, social URLs, contact email/phone, pull quote, any other credits.
+Placeholders (never invent): tagline, headshot, synopses, podcast listen links/episode list, social URLs, contact email/phone, pull quote, any other credits.
+Artwork status (see D11): Stitch concept posters shipped for Narco Sub, Burleson, The Four Aces (fabricated credits cropped out); podcast cover shipped (slogan block cropped out); The Last Astronaut poster pending (broken Stitch download URL); hero video shipped (compressed per design.md).
 Open: confirm The Four Aces and Burleson years with client; request a high-res headshot, stills, and a transparent logo.
