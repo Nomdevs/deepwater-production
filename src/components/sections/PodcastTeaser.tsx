@@ -51,7 +51,7 @@ export function PodcastTeaser({
         </div>
         <div className="flex aspect-square items-center justify-center rounded-lg border border-line bg-elevated">
           <div className="text-center">
-            <span className="font-display text-8xl text-navy">P³</span>
+            <span className="font-display text-8xl text-ice-dim">P³</span>
             <div className="mt-4">
               <Placeholder label={podcastCopy.artworkPlaceholder} />
             </div>

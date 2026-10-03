@@ -6,7 +6,7 @@ export function Portrait({ name }: { name: string }) {
   return (
     <div className="relative aspect-[3/4] overflow-hidden rounded-lg border border-line bg-elevated">
       <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center">
-        <span className="font-display text-7xl text-navy">
+        <span className="font-display text-7xl text-ice-dim">
           {name
             .split(' ')
             .map((part) => part.charAt(0))

@@ -12,7 +12,7 @@ export function PosterCard({ film }: { film: Film }) {
     <Card className="group h-full">
       <div className="relative aspect-[2/3] bg-elevated">
         <div className="flex h-full w-full items-center justify-center">
-          <span className="font-display text-6xl text-navy transition group-hover:text-ice-dim">
+          <span className="font-display text-6xl text-ice-dim transition group-hover:text-ice">
             {film.title.charAt(0)}
           </span>
         </div>
