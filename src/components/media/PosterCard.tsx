@@ -23,7 +23,11 @@ export function PosterCard({ film }: { film: Film }) {
           />
         ) : (
           <>
-            <div className="flex h-full w-full items-center justify-center">
+            <div
+              role="img"
+              aria-label={`${film.title} — neutral concept-art placeholder`}
+              className="flex h-full w-full items-center justify-center bg-(--gradient-hero)"
+            >
               <span className="font-display text-6xl text-ice-dim transition group-hover:text-ice">
                 {film.title.charAt(0)}
               </span>

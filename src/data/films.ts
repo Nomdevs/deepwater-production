@@ -29,7 +29,7 @@ export const films: Array<Film> = [
     actingRole: 'Richard Bishop',
     note: '',
     synopsis: null,
-    poster: null, // Stitch download URL for this poster is broken; see decisions.md D11
+    poster: null, // Reuse PosterCard neutral concept-art fallback; see decisions.md D15
   },
   {
     slug: 'burleson',
