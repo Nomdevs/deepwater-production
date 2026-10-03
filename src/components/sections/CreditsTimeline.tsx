@@ -2,7 +2,8 @@ import { Section } from '~/components/ui/Section'
 import { Heading } from '~/components/ui/Heading'
 import { Text } from '~/components/ui/Text'
 import { Badge } from '~/components/ui/Badge'
-import { films } from '~/data/films'
+import { showPlaceholders } from '~/data/site'
+import { films, filmsCopy } from '~/data/films'
 import { podcast } from '~/data/podcast'
 import { aboutCopy } from '~/data/about'
 
@@ -10,7 +11,7 @@ export function CreditsTimeline() {
   const entries = [
     ...films.map((film) => ({
       label: film.title,
-      meta: film.year ?? 'Year TBD',
+      meta: film.year ?? filmsCopy.yearTbd,
       detail: film.role ?? film.note,
     })),
     {
@@ -38,7 +39,7 @@ export function CreditsTimeline() {
                 {entry.detail}
               </Text>
             </div>
-            <Badge>{entry.meta}</Badge>
+            {(showPlaceholders || !entry.meta.includes('TBD')) && <Badge>{entry.meta}</Badge>}
           </li>
         ))}
       </ul>

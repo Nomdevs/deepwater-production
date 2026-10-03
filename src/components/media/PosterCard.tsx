@@ -3,6 +3,7 @@ import { Badge } from '~/components/ui/Badge'
 import { Placeholder } from '~/components/ui/Placeholder'
 import { Text } from '~/components/ui/Text'
 import type { Film } from '~/data/films'
+import { showPlaceholders } from '~/data/site'
 import { filmsCopy } from '~/data/films'
 
 // 2:3 poster card. Shows Stitch concept art when available; otherwise a branded
@@ -39,7 +40,9 @@ export function PosterCard({ film }: { film: Film }) {
       <div className="space-y-2 p-4">
         <div className="flex items-center justify-between gap-2">
           <h3 className="font-display text-lg text-ink">{film.title}</h3>
-          <Badge>{film.year ?? filmsCopy.yearTbd}</Badge>
+          {(showPlaceholders || (film.year && !film.year.includes('TBD'))) && (
+            <Badge>{film.year ?? filmsCopy.yearTbd}</Badge>
+          )}
         </div>
         {film.role && <Text tone="meta">{film.role}</Text>}
         {film.note && (

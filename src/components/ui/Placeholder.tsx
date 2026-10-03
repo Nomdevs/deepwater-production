@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { showPlaceholders } from '~/data/site'
 import { cn } from '~/lib/cn'
 
 // Visible marker for unverified/unfinished content (guardrails: anti-hallucination rule 2).
@@ -11,6 +12,8 @@ export function Placeholder({
   className?: string
   children?: ReactNode
 }) {
+  if (!showPlaceholders) return null
+
   return (
     <span
       title={`Placeholder: ${label}`}

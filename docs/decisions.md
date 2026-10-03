@@ -13,3 +13,4 @@ D11 – Artwork: Stitch AI-generated posters/covers adopted as Phase-1 concept a
 
 D12 – Hero tagline: use “Stories Built to Be Seen.” as demo brand copy pending client approval, not a factual claim (2026-10-04).
 D13 – Copyright: constant COPYRIGHT_YEAR = 2026 in src/data/site.ts avoids Workers module-start Date behavior; update explicitly each year.
+D14 – VITE_SHOW_PLACEHOLDERS explicitly parses the string true; development true, production false. Hide markers globally, podcast latest/listen/empty episodes blocks, unset social section/items, and unknown year badges in cards/credits. User request supersedes visible-marker guardrail for production; unknown facts remain unset. Vite env behavior: https://vite.dev/guide/env-and-mode.

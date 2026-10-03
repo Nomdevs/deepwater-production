@@ -4,6 +4,7 @@ import { Text } from '~/components/ui/Text'
 import { LinkButton } from '~/components/ui/LinkButton'
 import { Placeholder } from '~/components/ui/Placeholder'
 import { Button } from '~/components/ui/Button'
+import { showPlaceholders } from '~/data/site'
 import { podcast, podcastCopy } from '~/data/podcast'
 
 export function PodcastTeaser({
@@ -23,14 +24,14 @@ export function PodcastTeaser({
             {podcastCopy.hostedByPrefix} {podcast.host}
           </Text>
           <Text className="mt-4">{podcast.description}</Text>
-          <div className="mt-6">
+          {showPlaceholders && <div className="mt-6">
             {podcast.latestEpisode.title ? (
               <Text tone="muted">{podcast.latestEpisode.title}</Text>
             ) : (
               <Placeholder label="latest episode" />
             )}
-          </div>
-          <div className="mt-8 flex flex-wrap gap-3">
+          </div>}
+          {showPlaceholders && <div className="mt-8 flex flex-wrap gap-3">
             {podcast.listenLinks.map((link) =>
               link.href ? (
                 <Button
@@ -47,7 +48,7 @@ export function PodcastTeaser({
                 />
               ),
             )}
-          </div>
+          </div>}
         </div>
         <div className="overflow-hidden rounded-lg border border-line bg-elevated">
           <img

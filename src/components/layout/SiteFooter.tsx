@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import { Logo } from '~/components/media/Logo'
 import { Placeholder } from '~/components/ui/Placeholder'
-import { site } from '~/data/site'
+import { site, showPlaceholders } from '~/data/site'
 import { navItems } from '~/data/nav'
 
 export function SiteFooter() {
@@ -31,12 +31,12 @@ export function SiteFooter() {
             ))}
           </ul>
         </nav>
-        <div>
+        {(showPlaceholders || site.socials.some((social) => social.href)) && <div>
           <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
             {site.copy.footerFollow}
           </h2>
           <ul className="mt-4 space-y-2">
-            {site.socials.map((social) => (
+            {site.socials.filter((social) => showPlaceholders || social.href).map((social) => (
               <li key={social.label}>
                 {social.href ? (
                   <a
@@ -51,7 +51,7 @@ export function SiteFooter() {
               </li>
             ))}
           </ul>
-        </div>
+        </div>}
       </div>
       <div className="border-t border-line">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-ink-muted md:flex-row md:items-center md:justify-between md:px-10">

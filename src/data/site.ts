@@ -1,3 +1,4 @@
+export const showPlaceholders = import.meta.env.VITE_SHOW_PLACEHOLDERS === 'true'
 export const COPYRIGHT_YEAR = 2026
 
 export const site = {
