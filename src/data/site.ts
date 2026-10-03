@@ -4,7 +4,7 @@ export const site = {
   description:
     'Deepwater Productions, LLP is a Texas-based movie and television production company founded by Derek H. Potts.',
   // All values below are placeholders until the client confirms them (see docs/content.md).
-  tagline: null as string | null,
+  tagline: 'Stories Built to Be Seen.', // Demo tagline pending client approval; not a factual claim.
   heroVideo: '/hero.mp4', // compressed per docs/design.md; source: public/brand/deepwater.mp4
   heroPoster: '/hero-poster.jpg',
   stillImage: '/artwork/hero-still.webp', // Stitch underwater still (no text) — section backdrop
