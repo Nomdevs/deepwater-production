@@ -5,8 +5,8 @@ export const site = {
     'Deepwater Productions, LLP is a Texas-based movie and television production company founded by Derek H. Potts.',
   // All values below are placeholders until the client confirms them (see docs/content.md).
   tagline: null as string | null,
-  heroVideo: null as string | null, // /hero.mp4 once the client supplies footage
-  heroPoster: null as string | null,
+  heroVideo: '/hero.mp4', // compressed per docs/design.md; source: public/brand/deepwater.mp4
+  heroPoster: '/hero-poster.jpg',
   contactEmail: null as string | null,
   contactPhone: null as string | null,
   socials: [
