@@ -34,6 +34,7 @@ export function SiteHeader() {
         <div className="border-t border-line bg-abyss px-6 pb-6 md:hidden">
           <Nav
             className="pt-2"
+            listClassName="flex-col items-stretch gap-1"
             linkClassName="w-full"
             onNavigate={() => setOpen(false)}
           />

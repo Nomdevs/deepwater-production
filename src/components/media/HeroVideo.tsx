@@ -26,8 +26,8 @@ function SpeakerIcon({ muted }: { muted: boolean }) {
   )
 }
 
-// Poster-only below 640px; desktop video autoplays muted (browser policy)
-// with a toggle to enable audio.
+// Video at every viewport; autoplays muted (browser policy) with a toggle
+// to enable audio. The poster shows while the video loads.
 export function HeroVideo({
   videoSrc,
   posterSrc,
@@ -40,12 +40,9 @@ export function HeroVideo({
   const [muted, setMuted] = useState(true)
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {videoSrc && posterSrc && (
-        <img src={posterSrc} alt="" className="h-full w-full object-cover sm:hidden" />
-      )}
       {videoSrc ? (
         <video
-          className="hidden h-full w-full object-cover sm:block"
+          className="h-full w-full object-cover"
           autoPlay
           muted={muted}
           loop
