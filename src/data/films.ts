@@ -60,6 +60,7 @@ export const filmsCopy = {
   pageIntro:
     'Feature films and shorts developed and produced by Deepwater Productions.',
   synopsisPlaceholder: (title: string) => `${title} synopsis`,
+  actingRoleLabel: 'Acts as',
   posterArtPlaceholder: 'poster art',
   yearTbd: 'Year TBD',
 }

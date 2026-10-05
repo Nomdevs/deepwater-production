@@ -1,17 +1,29 @@
+import { useState } from 'react'
 import { Card } from '~/components/ui/Card'
 import { Badge } from '~/components/ui/Badge'
 import { Placeholder } from '~/components/ui/Placeholder'
 import { Text } from '~/components/ui/Text'
+import { FilmModal } from '~/components/media/FilmModal'
 import type { Film } from '~/data/films'
 import { showPlaceholders } from '~/data/site'
 import { filmsCopy } from '~/data/films'
 
 // 2:3 poster card. Shows Stitch concept art when available; otherwise a branded
 // placeholder panel until the client supplies final poster art (docs/decisions.md D11).
+// The whole card opens a FilmModal via a stretched button.
 export function PosterCard({ film }: { film: Film }) {
+  const [open, setOpen] = useState(false)
   return (
-    <Card className="group h-full">
-      <div className="relative aspect-[2/3] bg-elevated">
+    <>
+      <Card className="group relative h-full">
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          aria-haspopup="dialog"
+          aria-label={`${film.title} — view details`}
+          className="absolute inset-0 z-10 cursor-pointer rounded-lg bg-transparent focus-visible:outline-2 focus-visible:outline-ice"
+        />
+        <div className="relative aspect-[2/3] bg-elevated">
         {film.poster ? (
           <img
             src={film.poster}
@@ -56,5 +68,7 @@ export function PosterCard({ film }: { film: Film }) {
         )}
       </div>
     </Card>
+    {open && <FilmModal film={film} onClose={() => setOpen(false)} />}
+    </>
   )
 }
