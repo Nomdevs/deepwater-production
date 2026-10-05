@@ -9,7 +9,11 @@ import { site } from '~/data/site'
 export function HeroSection() {
   return (
     <section className="relative flex min-h-svh items-end overflow-hidden">
-      <HeroVideo videoSrc={site.heroVideo} posterSrc={site.heroPoster}>
+      <HeroVideo
+        videoSrc={site.heroVideo}
+        portraitSrc={site.heroPortrait}
+        posterSrc={site.heroPoster}
+      >
         <Container className="pb-20 pt-40 md:pb-28">
           <Text tone="meta" className="text-ice">
             {site.legalName}

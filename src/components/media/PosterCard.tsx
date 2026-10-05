@@ -27,6 +27,8 @@ export function PosterCard({ film }: { film: Film }) {
         {film.poster ? (
           <img
             src={film.poster}
+            srcSet={`${film.poster} 382w, ${film.poster.replace('.webp', '-764.webp')} 764w`}
+            sizes="(min-width: 1024px) 242px, (min-width: 768px) 350px, 45vw"
             alt={`${film.title} — concept poster art`}
             loading="lazy"
             width={382}

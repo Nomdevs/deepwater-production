@@ -46,6 +46,8 @@ export function FilmModal({ film, onClose }: { film: Film; onClose: () => void }
           {film.poster ? (
             <img
               src={film.poster}
+              srcSet={`${film.poster} 382w, ${film.poster.replace('.webp', '-764.webp')} 764w`}
+              sizes="(min-width: 768px) 240px, 100vw"
               alt={`${film.title} — concept poster art`}
               className="h-full w-full object-cover"
             />

@@ -27,17 +27,21 @@ function SpeakerIcon({ muted }: { muted: boolean }) {
 }
 
 // Video at every viewport; autoplays muted (browser policy) with a toggle
-// to enable audio. The poster shows while the video loads.
+// to enable audio. Below 640px a portrait-cropped source keeps subjects
+// in frame; the poster shows while the video loads.
 export function HeroVideo({
   videoSrc,
+  portraitSrc,
   posterSrc,
   children,
 }: {
   videoSrc: string | null
+  portraitSrc?: string | null
   posterSrc: string | null
   children: ReactNode
 }) {
   const [muted, setMuted] = useState(true)
+  const posterSmall = posterSrc?.replace('.webp', '-640.webp')
   return (
     <div className="absolute inset-0 overflow-hidden">
       {videoSrc ? (
@@ -49,11 +53,17 @@ export function HeroVideo({
           playsInline
           preload="metadata"
           poster={posterSrc ?? undefined}
-          src={videoSrc}
-        />
+        >
+          {portraitSrc && (
+            <source src={portraitSrc} media="(max-width: 639px)" type="video/mp4" />
+          )}
+          <source src={videoSrc} type="video/mp4" />
+        </video>
       ) : posterSrc ? (
         <img
           src={posterSrc}
+          srcSet={posterSmall ? `${posterSmall} 640w, ${posterSrc} 1280w` : undefined}
+          sizes="100vw"
           alt=""
           className="h-full w-full object-cover"
         />

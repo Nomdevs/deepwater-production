@@ -9,7 +9,9 @@ export const site = {
   // All values below are placeholders until the client confirms them (see docs/content.md).
   tagline: 'Stories Built to Be Seen.', // Demo tagline pending client approval; not a factual claim.
   heroVideo: '/hero.mp4', // compressed per docs/design.md; source: public/brand/deepwater.mp4
-  heroPoster: '/hero-poster.jpg',
+  heroPortrait: '/hero-portrait.mp4', // portrait crop of the same reel for <640px
+  heroPoster: '/hero-poster.webp',
+  heroPosterSmall: '/hero-poster-640.webp',
   stillImage: '/artwork/hero-still.webp', // Stitch underwater still (no text) — section backdrop
   contactEmail: null as string | null,
   contactPhone: null as string | null,
