@@ -29,7 +29,7 @@ export const films: Array<Film> = [
     actingRole: 'Richard Bishop',
     note: '',
     synopsis: null,
-    poster: null, // Reuse PosterCard neutral concept-art fallback; see decisions.md D15
+    poster: '/posters/the-last-astronaut.webp', // Stitch concept art; fabricated credits cropped per D11/D19
   },
   {
     slug: 'burleson',
